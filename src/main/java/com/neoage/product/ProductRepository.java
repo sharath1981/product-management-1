@@ -1,10 +1,8 @@
 package com.neoage.product;
 
+import java.util.UUID;
 import org.springframework.data.cassandra.repository.ReactiveCassandraRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface ProductRepository extends ReactiveCassandraRepository<Product, UUID> {
-}
+public interface ProductRepository extends ReactiveCassandraRepository<Product, UUID> {}

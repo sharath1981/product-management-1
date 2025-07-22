@@ -9,13 +9,12 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface ProductMapper {
 
-    ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
+  ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
 
-    Product toProduct(ProductDto dto);
+  Product toProduct(ProductDto dto);
 
-    ProductDto toProductDto(Product product);
+  ProductDto toProductDto(Product product);
 
-    @Mapping(target = "id", ignore = true)
-    Product mergeToProduct(ProductDto dto, @MappingTarget Product product);
-
+  @Mapping(target = "id", ignore = true)
+  Product mergeToProduct(ProductDto dto, @MappingTarget Product product);
 }
